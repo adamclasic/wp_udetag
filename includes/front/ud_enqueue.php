@@ -17,14 +17,14 @@ function ud_enqueue()
 
 // <link rel="stylesheet" href="css/responsive.css" type="text/css" />
 
-wp_register_style('bootstrap', $uri . 'assets/css/bootstrap.css');
+wp_register_style('bootstrap', $uri . '/css/bootstrap.css');
   wp_register_style('file_handle', $uri . '/css/style.css');
   wp_register_style('dark', $uri . '/css/dark.css');
   wp_register_style('font-icons', $uri . '/css/font-icons.css');
   wp_register_style('animate', $uri . '/css/animate.css');
   wp_register_style('magnific-popup', $uri . '/css/magnific-popup.css');
   wp_register_style('custom', $uri . '/css/custom.css');
-  wp_register_style('responsive', $uri . '/responsive.css');
+  wp_register_style('responsive', $uri . '/css/responsive.css');
 
   wp_enqueue_style('bootstrap');
   wp_enqueue_style('file_handle');
@@ -34,4 +34,17 @@ wp_register_style('bootstrap', $uri . 'assets/css/bootstrap.css');
   wp_enqueue_style('magnific-popup');
   wp_enqueue_style('custom');
   wp_enqueue_style('responsive');
+
+  // <script src="js/jquery.js"></script>
+  // <script src="js/plugins.js"></script>
+  // <script src="js/functions.js"></script>
+
+  // wp_register_script('plugins', $uri . '/js/plugins.js');
+  wp_register_script('plugins', $uri . '/js/plugins.js', [], false, true);
+  // wp_register_script('jquery', $uri . '/js/jquery.js', [], false, true);
+  wp_register_script('functions', $uri . '/js/functions.js', [], false, true);
+
+  wp_enqueue_script('plugins');
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('functions');
 }
