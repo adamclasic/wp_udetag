@@ -111,7 +111,14 @@
 
             <!-- ul Main Menu
             ======================================== -->
-            <ul>
+            <?php wp_nav_menu(array([
+              'theme_location' => 'primary',
+              'container' => false,
+              'fallback_cb' => false,
+              'depth' => 4
+            ])); ?>
+
+            <!-- <ul>
               <li><a href="#">
                   <div>Menu Item 1</div>
                 </a>
@@ -204,7 +211,9 @@
                 </ul>
               </li>
               <li><a href="#">Menu Item 4</a></li>
-            </ul><!-- ul Main Menu end -->
+            </ul>
+             -->
+             <!-- ul Main Menu end -->
 
             <!-- Top Cart
             ============================================= -->
@@ -533,7 +542,6 @@
         </div>
 
       </div><!-- #copyrights end -->
-
     </footer><!-- #footer end -->
   </div><!-- #wrapper end -->
 
