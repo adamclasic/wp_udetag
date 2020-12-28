@@ -314,7 +314,7 @@
                 the_post();
                 get_template_part('template-parts/post', 'single'); 
               }; ?>
-
+<!-- 
               <div class="entry clearfix">
                 <div class="entry-image">
                   <iframe src="http://player.vimeo.com/video/87701971" width="500" height="281" frameborder="0"
@@ -397,9 +397,11 @@
                     deserunt. Saepe!</p>
                   <a href="single.html" class="more-link">Read More</a>
                 </div>
-              </div>
+              </div> -->
 
-            </div><!-- #posts end -->
+            </div>
+            
+            <!-- #posts end -->
 
             <!-- Pagination
             ============================================= -->
