@@ -115,7 +115,7 @@
               'theme_location' => 'primary',
               'container' => false,
               'fallback_cb' => false,
-              'depth' => 4
+              'depth' => 2
             ])); ?>
 
             <!-- <ul>
