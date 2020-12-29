@@ -1,6 +1,9 @@
 
 
-    <?php get_header(); ?>
+    <?php get_header();
+    while (have_posts()) {
+      the_post(); 
+    ?>
 
     <!-- Content
         ============================================= -->
@@ -23,13 +26,13 @@
                 <!-- Entry Title
                                 ============================================= -->
                 <div class="entry-title">
-                  <h2>This is a Standard post with a Preview Image</h2>
+                  <h2><?php the_title() ?></h2>
                 </div><!-- .entry-title end -->
 
                 <!-- Entry Meta
                                 ============================================= -->
                 <ul class="entry-meta clearfix">
-                  <li><i class="icon-calendar3"></i> 10th July 2014</li>
+                  <li><i class="icon-calendar3"></i> <?php echo get_the_date() ?></li>
                   <li>
                     <a href="#">
                       <i class="icon-user"></i> admin
@@ -50,46 +53,7 @@
                                 ============================================= -->
                 <div class="entry-content notopmargin">
 
-                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                    odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo
-                    risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-                    magna, vel scelerisque nisl consectetur et.</p>
-
-                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="#">Curabitur
-                      blandit tempus porttitor</a>. Integer posuere erat a ante venenatis dapibus
-                    posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget
-                    quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi
-                    porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.
-                  </p>
-
-                  <blockquote>
-                    <p>Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est
-                      at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                      venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat
-                      porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla
-                      non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
-                    </p>
-                  </blockquote>
-
-                  <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis
-                    consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget
-                    metus.</p>
-
-                  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia
-                    bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in,
-                    egestas eget quam. <a href="#">Nullam quis risus eget urna</a> mollis ornare vel
-                    eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-
-                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                    odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo
-                    risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-                    magna, vel scelerisque nisl consectetur et.</p>
-
-                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus
-                    porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
-                    ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget
-                    metus. Vestibulum id ligula porta felis euismod semper.</p>
+                <?php the_content() ?>
                   <!-- Post Single - Content End -->
 
                   <!-- Tag Cloud
@@ -199,177 +163,8 @@
 
               <!-- Comments
                             ============================================= -->
-              <div id="comments" class="clearfix">
-
-                <h3 id="comments-title"><span>3</span> Comments</h3>
-
-                <!-- Comments List
-                                ============================================= -->
-                <ol class="commentlist clearfix">
-
-                  <li class="comment even thread-even depth-1" id="li-comment-1">
-
-                    <div id="comment-1" class="comment-wrap clearfix">
-
-                      <div class="comment-meta">
-
-                        <div class="comment-author vcard">
-
-                          <span class="comment-avatar clearfix">
-                            <img src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60'
-                              class='avatar avatar-60 photo avatar-default' height='60' width='60' />
-                          </span>
-
-                        </div>
-
-                      </div>
-
-                      <div class="comment-content clearfix">
-
-                        <div class="comment-author">
-                          John Doe
-                          <span>April 24, 2012 at 10:46 am</span>
-                        </div>
-
-                        <p>
-                          Donec sed odio dui. Nulla vitae elit libero,
-                          a pharetra augue. Nullam id dolor id nibh
-                          ultricies vehicula ut id elit. Integer
-                          posuere erat a ante venenatis dapibus
-                          posuere velit aliquet.
-                        </p>
-
-                      </div>
-
-                      <div class="clear"></div>
-
-                    </div>
-
-                  </li>
-
-                  <li class="comment even thread-even depth-1" id="li-comment-2">
-
-                    <div id="comment-2" class="comment-wrap clearfix">
-
-                      <div class="comment-meta">
-
-                        <div class="comment-author vcard">
-
-                          <span class="comment-avatar clearfix">
-                            <img src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60'
-                              class='avatar avatar-60 photo avatar-default' height='60' width='60' />
-                          </span>
-
-                        </div>
-
-                      </div>
-
-                      <div class="comment-content clearfix">
-
-                        <div class="comment-author">
-                          John Doe
-                          <span>April 24, 2012 at 10:46 am</span>
-                        </div>
-
-                        <p>
-                          Donec sed odio dui. Nulla vitae elit libero,
-                          a pharetra augue. Nullam id dolor id nibh
-                          ultricies vehicula ut id elit. Integer
-                          posuere erat a ante venenatis dapibus
-                          posuere velit aliquet.
-                        </p>
-
-                      </div>
-
-                      <div class="clear"></div>
-
-                    </div>
-
-                  </li>
-
-                  <li class="comment even thread-even depth-1" id="li-comment-3">
-
-                    <div id="comment-3" class="comment-wrap clearfix">
-
-                      <div class="comment-meta">
-
-                        <div class="comment-author vcard">
-
-                          <span class="comment-avatar clearfix">
-                            <img src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60'
-                              class='avatar avatar-60 photo avatar-default' height='60' width='60' />
-                          </span>
-
-                        </div>
-
-                      </div>
-
-                      <div class="comment-content clearfix">
-
-                        <div class="comment-author">
-                          John Doe
-                          <span>April 24, 2012 at 10:46 am</span>
-                        </div>
-
-                        <p>
-                          Donec sed odio dui. Nulla vitae elit libero,
-                          a pharetra augue. Nullam id dolor id nibh
-                          ultricies vehicula ut id elit. Integer
-                          posuere erat a ante venenatis dapibus
-                          posuere velit aliquet.
-                        </p>
-
-                      </div>
-
-                      <div class="clear"></div>
-
-                    </div>
-
-                  </li>
-
-                </ol><!-- .commentlist end -->
-
-                <div class="clear"></div>
-
-                <!-- Comment Form
-                                ============================================= -->
-                <div id="respond" class="clearfix">
-
-                  <h3>Leave a <span>Comment</span></h3>
-
-                  <form class="clearfix" action="#" method="post" id="commentform">
-
-                    <div class="col_one_third">
-                      <label>Name</label>
-                      <input type="text" name="author" class="sm-form-control" />
-                    </div>
-
-                    <div class="col_one_third">
-                      <label>Email</label>
-                      <input type="text" name="email" class="sm-form-control" />
-                    </div>
-
-                    <div class="col_one_third col_last">
-                      <label>Website</label>
-                      <input type="text" name="url" class="sm-form-control" />
-                    </div>
-
-                    <div class="clear"></div>
-
-                    <div class="col_full">
-                      <label>Comment</label>
-                      <textarea name="comment" cols="58" rows="7" class="sm-form-control"></textarea>
-                    </div>
-
-                    <div class="col_full nobottommargin">
-                      <button type="submit" id="submit-button" class="button button-3d nomargin">Submit Comment</button>
-                    </div>
-
-                  </form>
-
-                </div><!-- #respond end -->
-
-              </div><!-- #comments end -->
+                            <?php comments_template(); ?>
+              <!-- #comments end -->
 
             </div>
 
@@ -417,6 +212,6 @@
         </div>
 
       </div>
-
+      <?php } ?>
     </section><!-- #content end -->
 <?php wp_footer(); ?>
