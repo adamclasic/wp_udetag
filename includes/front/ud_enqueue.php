@@ -3,6 +3,7 @@ function ud_enqueue()
 {
   $uri = get_theme_file_uri();
   $ver = DEV_MODE ? time() : false;
+
   // Css files
 
   wp_register_style('bootstrap', $uri . '/css/bootstrap.css', [], $ver);
@@ -31,4 +32,4 @@ function ud_enqueue()
   wp_enqueue_script('plugins');
   wp_enqueue_script('jquery');
   wp_enqueue_script('functions');
-}
+} 

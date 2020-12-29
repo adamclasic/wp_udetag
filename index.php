@@ -134,17 +134,17 @@
             ============================================= -->
             <div class="row mb-3">
               <div class="col-12">
-              <?php echo get_next_post_link('&larr; Older'); ?>
+              <?php next_post_link('next'); ?>
+              <?php previous_post_link(); ?>
                
-                <a href="<?php echo get_next_post_link('&larr; Older'); ?>" class="btn btn-outline-secondary float-left">
+                <a href="<?php next_post_link('&larr; Older'); ?>" class="btn btn-outline-secondary float-left">
                   &larr; Older
                 </a>
-                <a href="<?php echo get_previous_post_link('Newer &rarr;'); ?>" class="btn btn-outline-dark float-right">
+                <a href="<?php previous_post_link('Newer &rarr;'); ?>" class="btn btn-outline-dark float-right">
                   Newer &rarr;
                 </a>
               </div>
             </div>
-
 
             <!-- .pager end -->
 

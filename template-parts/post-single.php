@@ -7,7 +7,7 @@
   </div>
   <div class="entry-title">
     <h2>
-      <a href="single.html">
+      <a href="<?php the_permalink() ?>">
         <?php the_title(); ?>
       </a>
     </h2>
