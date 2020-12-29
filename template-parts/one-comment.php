@@ -18,7 +18,7 @@
 
       <div class="comment-author">
         <?php echo $comment->comment_author; ?>
-        <span>April 24, 2012 at 10:46 am</span>
+        <span><?php echo $comment->comment_date; ?></span>
       </div>
 
       <p>
