@@ -46,7 +46,7 @@
                 <!-- Entry Image
                                 ============================================= -->
                 <div class="entry-image">
-                  <a href="#"><img src="images/blog/full/1.jpg"></a>
+                  <a href="#"><?php the_post_thumbnail(); ?></a>
                 </div><!-- .entry-image end -->
 
                 <!-- Entry Content
@@ -99,7 +99,8 @@
                 </div>
                 <div class="card-body">
                   <div class="author-image">
-                    <img src="images/author/1.jpg" class="rounded-circle">
+                  <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="">
+                    <!-- <img src="images/author/1.jpg" class="rounded-circle"> -->
                   </div>
                   <?php the_author_meta('description'); ?>
                 </div>
@@ -138,7 +139,7 @@
                       <li><i class="icon-comments"></i> <?php echo get_comments_number( $post->id );; ?></li>
                     </ul>
                     <div class="entry-content">
-                    <?php the_excerpt(); ?>
+                    <?php the_excerpt($post); ?>
                     </div>
                   </div>
                 </div>

@@ -8,13 +8,14 @@ include(get_theme_file_path('/includes/front/supports.php'));
 include(get_theme_file_path('/includes/front/ud_widgets.php'));
 // include(get_theme_file_path('/includes/front/class-wp-bootstrap-navwalker.php'));
 function ftf() {
-	return 15;
+	return 5;
 }
 // hooks
 add_action('wp_enqueue_scripts', 'ud_enqueue');
 add_action('after_setup_theme', 'supports');
 add_action('widgets_init', 'ud_widgets');
 apply_filters( 'excerpt_length', 'ftf' );
+add_theme_support( 'post-thumbnails' );
 //shortcodes
 
 
