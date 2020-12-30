@@ -123,7 +123,8 @@
                 <div class="mpost clearfix">
                   <div class="entry-image">
                     <a href="#">
-                      <img src="images/blog/small/10.jpg">
+                      <?php the_post_thumbnail(); ?>
+                      <!-- <img src=images/blog/small/10.jpg"> -->
                     </a>
                   </div>
                   <div class="entry-c">
