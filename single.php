@@ -94,20 +94,14 @@
                 <div class="card-header">
                   <strong>
                     Posted by
-                    <a href="#">John Doe</a>
+                    <a href="#"><?php the_author(); ?></a>
                   </strong>
                 </div>
                 <div class="card-body">
                   <div class="author-image">
                     <img src="images/author/1.jpg" class="rounded-circle">
                   </div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolores, eveniet, eligendi et nobis neque minus mollitia sit
-                  repudiandae ad repellendus recusandae blanditiis praesentium v
-                  itae ab sint earum voluptate velit beatae alias fugit
-                  accusantium laboriosam nisi reiciendis deleniti tenetur
-                  molestiae maxime id quaerat consequatur fugiat aliquam
-                  laborum nam aliquid. Consectetur, perferendis?
+                  <?php the_author_meta('description'); ?>
                 </div>
               </div><!-- Post Single - Author End -->
 
@@ -117,6 +111,14 @@
 
               <div class="related-posts clearfix">
 
+              <?php $ud_related_posts = new WP_Query([
+                'posts_per_page' => 2,
+                'post__not_in' => [get_the_ID()],
+              ]);
+              while ($ud_related_posts->have_posts()) {
+                $ud_related_posts->the_post();
+                
+                ?>
                 <div class="mpost clearfix">
                   <div class="entry-image">
                     <a href="#">
@@ -126,38 +128,27 @@
                   <div class="entry-c">
                     <div class="entry-title">
                       <h4>
-                        <a href="#">
-                          This is an Image Post
+                        <a href="<?php the_permalink(); ?>">
+                          <?php echo get_the_title(); ?>
                         </a>
                       </h4>
                     </div>
                     <ul class="entry-meta clearfix">
                       <li><i class="icon-calendar3"></i> 10th July 2014</li>
-                      <li><i class="icon-comments"></i> 12</li>
+                      <li><i class="icon-comments"></i> <?php echo get_comments_number( $post->id );; ?></li>
                     </ul>
                     <div class="entry-content">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Mollitia nisi perferendis.
+                    <?php the_excerpt(); ?>
                     </div>
                   </div>
                 </div>
+                <?php
+              }
+              wp_reset_postdata(); 
+              ?>
 
-                <div class="mpost clearfix">
-                  <div class="entry-image">
-                    <a href="#"><img src="images/blog/small/20.jpg" alt="Blog Single"></a>
-                  </div>
-                  <div class="entry-c">
-                    <div class="entry-title">
-                      <h4><a href="#">This is a Video Post</a></h4>
-                    </div>
-                    <ul class="entry-meta clearfix">
-                      <li><i class="icon-calendar3"></i> 24th July 2014</li>
-                      <li><i class="icon-comments"></i> 16</li>
-                    </ul>
-                    <div class="entry-content">Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Mollitia nisi perferendis.</div>
-                  </div>
-                </div>
+
+
 
               </div>
 
