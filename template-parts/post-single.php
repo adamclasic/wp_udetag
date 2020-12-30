@@ -33,7 +33,9 @@
   </ul>
   <div class="entry-content">
     <p>
-    <?php the_excerpt(); ?>
+    <?php
+
+     the_content(); ?>
 
     </p>
     <a href="<?php echo get_the_permalink(); ?>" class="more-link">Read More</a>
