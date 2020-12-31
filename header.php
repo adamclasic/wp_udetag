@@ -33,32 +33,44 @@
           <!-- Top Links
           ============================================= -->
           <div class="top-links">
-            <ul>
+            <?php wp_nav_menu(array([
+              'theme_location' => 'secondary',
+              'container' => false,
+              'fallback_cb' => false,
+              'depth' => 1
+            ])); ?>
+            <!-- <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">FAQs</a></li>
               <li><a href="#">Contact</a></li>
-            </ul>
+            </ul> -->
           </div><!-- .top-links end -->
 
         </div>
-
+        
         <div class="col_half fright col_last nobottommargin">
-
+          
           <!-- Top Social
           ============================================= -->
           <div id="top-social">
             <ul>
+              <?php if( get_theme_mod('facebook') ) {;?>
               <li>
-                <a href="#" class="si-facebook">
+                <a href="<?php echo get_theme_mod('facebook') ;?>" class="si-facebook">
                   <span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span>
                 </a>
               </li>
+              <?php } ?>
+              <?php if( get_theme_mod('twitter') ) {;?>
+
               <li>
-                <a href="#" class="si-twitter">
+                <a href="<?php echo get_theme_mod('twitter') ;?>" class="si-twitter">
                   <span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span>
                 </a>
               </li>
               <li>
+              <?php } ?>
+
                 <a href="#" class="si-instagram">
                   <span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span>
                 </a>
@@ -91,11 +103,19 @@
         <!-- Logo
         ============================================= -->
         <div id="logo">
-          <a href="#" class="standard-logo">Udemy</a>
+          <?php
+          if (has_custom_logo()) {
+            the_custom_logo();
+          } else {
+          ?>
+            <a href="#" class="standard-logo">Udemy</a>
+          <?php } ?>
         </div><!-- #logo end -->
 
         <div class="top-advert">
-          <img src="images/magazine/ad.jpg">
+          <?php if (function_exists('quads_ad'))
+            echo quads_ad(array('location' => 'header'));
+          ?>
         </div>
 
       </div>
@@ -273,3 +293,4 @@
       </div>
 
     </header><!-- #header end -->
+    
