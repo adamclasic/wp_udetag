@@ -38,7 +38,7 @@
             <div id="posts">
               <?php while (have_posts()) {
                 the_post();
-                get_template_part('template-parts/post', 'single'); 
+                get_template_part('template-parts/post', 'excerpt'); 
               ?>
                       <?php }; ?>
             </div>
@@ -49,15 +49,9 @@
             ============================================= -->
             <div class="row mb-3">
               <div class="col-12">
-              <?php next_post_link('next'); ?>
-              <?php previous_post_link(); ?>
-               
-                <a href="<?php next_post_link('&larr; Older'); ?>" class="btn btn-outline-secondary float-left">
-                  &larr; Older
-                </a>
-                <a href="<?php previous_post_link('Newer &rarr;'); ?>" class="btn btn-outline-dark float-right">
-                  Newer &rarr;
-                </a>
+              <?php 
+									echo paginate_links();
+								?>  
               </div>
             </div>
 
