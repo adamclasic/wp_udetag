@@ -12,7 +12,7 @@
   <?php wp_head(); ?>
   <!-- Document Title
 	============================================= -->
-  <title>Index Template</title>
+  <!-- <title>Index Template</title> -->
 
 </head>
 

@@ -5,7 +5,7 @@
 		============================================= -->
 		<section id="page-title">
 			<div class="container clearfix">
-				<h1>Search Results for: Term</h1>
+				<h1>Search Results for: <?php the_search_query();?></h1>
 			</div>
 		</section><!-- #page-title end -->
 
