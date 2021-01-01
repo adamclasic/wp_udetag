@@ -6,7 +6,8 @@ define('DEV_MODE', True);
 include(get_theme_file_path('/includes/front/ud_enqueue.php'));
 include(get_theme_file_path('/includes/front/supports.php'));
 include(get_theme_file_path('/includes/front/ud_widgets.php'));
-include(get_theme_file_path('/includes/front/ud_customizer.php'));
+include(get_theme_file_path('/includes/customizer/ud_customizer.php'));
+// include(get_theme_file_path('/includes/customizer/ud_btns.php'));
 function ftf() {
 	return 5;
 }
