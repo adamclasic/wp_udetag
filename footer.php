@@ -9,7 +9,9 @@
     <div class="col_half">
       Copyrights &copy; 2017 All Rights Reserved by Udemy.<br>
       <div class="copyright-links">
-        <a href="#">Privacy Policy</a>
+        <?php if(get_theme_mod('footer_page')) {?>
+        <a href="<?php the_permalink(get_theme_mod('footer_page'))?>"><?php echo get_the_title(get_theme_mod('footer_page'))?></a>
+        <?php } ?>
       </div>
     </div>
 
