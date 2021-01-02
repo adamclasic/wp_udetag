@@ -31,8 +31,8 @@
 
       <div class="clear"></div>
 
-      <i class="icon-envelope2"></i> info@email.com <span class="middot">&middot;</span>
-      <i class="icon-headphones"></i> +55-5-5555-5555
+      <i class="icon-envelope2"></i> info@email.com <?php var_dump( get_theme_mod('ud_downn_link')); ?> <span class="middot">&middot;</span>
+      <i class="icon-headphones"></i> +55-5-5555-5555 <?php var_dump( get_theme_mod('ud_downn_color')); ?>
     </div>
 
   </div>
