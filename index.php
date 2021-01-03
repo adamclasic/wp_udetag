@@ -4,7 +4,7 @@
     <section id="content">
 
       <div class="content-wrap">
-        <?php if(is_front_page() AND is_home() AND get_theme_mod('breaking_news')) {?>
+        <?php if(get_theme_mod('breaking_link1') OR get_theme_mod('breaking_link2') OR get_theme_mod('breaking_link3')) {?>
           <div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
             <div>
               <div class="container clearfix">
@@ -14,12 +14,18 @@
                   data-pagi="false">
                   <div class="flexslider">
                     <div class="slider-wrap">
-                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </strong></a></div>
-                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </strong></a></div>
-                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </strong></a></div>
+                      <?php if(get_theme_mod('breaking_link1')) {?>
+                        <div class="slide"><a href="<?php echo get_the_permalink(get_theme_mod('breaking_link1')); ?>"><strong><?php echo get_the_title(get_theme_mod('breaking_link1')); ?>
+                            </strong></a></div>
+                      <?php } ?>
+                      <?php if(get_theme_mod('breaking_link2')) {?>
+                        <div class="slide"><a href="<?php echo get_the_permalink(get_theme_mod('breaking_link2')); ?>"><strong><?php echo get_the_title(get_theme_mod('breaking_link2')); ?>
+                            </strong></a></div>
+                      <?php } ?>
+                      <?php if(get_theme_mod('breaking_link3')) {?>
+                        <div class="slide"><a href="<?php echo get_the_permalink(get_theme_mod('breaking_link3')); ?>"><strong><?php echo get_the_title(get_theme_mod('breaking_link3')); ?>
+                            </strong></a></div>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>

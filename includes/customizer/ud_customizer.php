@@ -13,4 +13,5 @@ function ud_customizer($wp_customize)
   ud_socials($wp_customize);
   ud_top_right_btns($wp_customize);
   ud_footer_pages($wp_customize);
+  ud_breakign_news($wp_customize);
 }

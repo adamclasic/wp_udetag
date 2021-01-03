@@ -10,6 +10,7 @@ include(get_theme_file_path('/includes/customizer/ud_footer_pages.php'));
 include(get_theme_file_path('/includes/customizer/ud_socials.php'));
 include(get_theme_file_path('/includes/customizer/ud_download_cv.php'));
 include(get_theme_file_path('/includes/customizer/ud_top_right_btns.php'));
+include(get_theme_file_path('/includes/customizer/ud_breaking_news.php'));
 include(get_theme_file_path('/includes/customizer/ud_customizer.php'));
 function ftf() {
 	return 5;
