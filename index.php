@@ -4,28 +4,29 @@
     <section id="content">
 
       <div class="content-wrap">
+        <?php if(is_front_page() AND is_home() AND get_theme_mod('breaking_news')) {?>
+          <div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
+            <div>
+              <div class="container clearfix">
+                <span class="badge badge-danger bnews-title">Breaking News:</span>
 
-        <div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
-          <div>
-            <div class="container clearfix">
-              <span class="badge badge-danger bnews-title">Breaking News:</span>
-
-              <div class="fslider bnews-slider nobottommargin" data-speed="800" data-pause="6000" data-arrows="false"
-                data-pagi="false">
-                <div class="flexslider">
-                  <div class="slider-wrap">
-                    <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </strong></a></div>
-                    <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </strong></a></div>
-                    <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </strong></a></div>
+                <div class="fslider bnews-slider nobottommargin" data-speed="800" data-pause="6000" data-arrows="false"
+                  data-pagi="false">
+                  <div class="flexslider">
+                    <div class="slider-wrap">
+                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </strong></a></div>
+                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </strong></a></div>
+                      <div class="slide"><a href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </strong></a></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        <?php } ?>
 
         <div class="container clearfix">
 
