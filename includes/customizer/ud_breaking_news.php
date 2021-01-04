@@ -53,5 +53,4 @@ function ud_breakign_news($wp_customize)
     'type'      => 'dropdown-pages'
   )));
   //breaking news end
-
   }
