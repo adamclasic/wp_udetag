@@ -23,8 +23,8 @@
                     ============================================= -->
           <div class="postcontent nobottommargin clearfix">
 
-            <?php the_content(); ?>
-
+            <?php // the_content(); ?>
+            <?php woocommerce_content(); ?>
           </div><!-- .postcontent end -->
 
           <!-- Sidebar
