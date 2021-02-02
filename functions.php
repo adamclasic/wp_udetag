@@ -20,6 +20,17 @@ add_action('wp_enqueue_scripts', 'ud_enqueue');
 add_action('after_setup_theme', 'supports');
 add_action('widgets_init', 'ud_widgets');
 add_action('customize_register', 'ud_customizer');
+add_action( 'pre_get_posts', 'custom_get_posts' );
+
+function custom_get_posts( $query ) {
+
+  if( is_home() && $query->is_main_query() ) {    
+    $query->set('post_type', ['post', 'recipe']);
+  }
+
+}
+
+
 apply_filters( 'excerpt_length', 'ftf' );
 //shortcodes
 
